@@ -10,7 +10,7 @@ export default [
       semi: "error",
       "no-unused-vars": ["error", { args: "none" }],
       "no-undef": "error",
-      "no-void": ["error", { allowAsStatement: true }],
+      "no-void": "off",
     },
   },
 ];
