@@ -198,8 +198,7 @@
                   "phoneNumber",
                   "email",
                   "isFavourite",
-                  "contactType",
-                  "userId"
+                  "contactType"
                 ],
                 "properties": {
                   "name": {
@@ -209,7 +208,7 @@
                   },
                   "phoneNumber": {
                     "description": "Contact's phone Number",
-                    "type": "number",
+                    "type": "string",
                     "example": 794712833
                   },
                   "email": {
@@ -645,7 +644,7 @@
           },
           "phoneNumber": {
             "description": "Contact's phoneNumber",
-            "type": "number",
+            "type": "string",
             "example": 125563734
           },
           "email": {
