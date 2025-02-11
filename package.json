@@ -9,7 +9,7 @@
     "start": "node ./src/index.js",
     "dev": "nodemon src/index.js",
     "build": "npm run build-docs",
-    "build-docs": "redocly bundle --ext json -o docs/swagger.json",
+    "build-docs": "redocly bundle docs/openapi.yaml --ext json -o docs/swagger.json",
     "preview-docs": "redocly preview-docs"
   },
   "keywords": [],
@@ -38,6 +38,7 @@
     "mongoose": "^8.9.4",
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.10.0",
-    "pino-http": "^10.4.0"
+    "pino-http": "^10.4.0",
+    "swagger-ui-express": "^5.0.1"
   }
 }
