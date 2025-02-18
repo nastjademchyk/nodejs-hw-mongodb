@@ -43,6 +43,13 @@ export const loginUserController = async (req, res) => {
 };
 
 export const logoutUserController = async (req, res) => {
+  if (!req.cookies.sessionId) {
+    return res.status(400).json({
+      status: 400,
+      message: "No active session to logout from",
+    });
+  }
+
   if (req.cookies.sessionId) {
     await logoutUser(req.cookies.sessionId);
 

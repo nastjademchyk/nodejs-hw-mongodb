@@ -1,0 +1,31 @@
+post:
+  tags:
+    - Auth
+  summary: "Refresh access token"
+  operationId: refreshUserSession
+  description: "Refresh the user's access token using a valid refresh token."
+  security:
+    - bearerAuth: []
+  responses:
+    "200":
+      description: "Successfully refreshed a session!"
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                type: integer
+                example: 200
+              message:
+                type: string
+                example: "Successfully refreshed a session!"
+              data:
+                type: object
+                properties:
+                  accessToken:
+                    type: string
+                    description: "Newly issued access token"
+                    example: "newRandomBase64AccessToken=="
+    "401":
+      $ref: ../../components/responses/auth/401-auth.yaml
